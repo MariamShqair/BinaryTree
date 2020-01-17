@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+
+       <script src="Tree.js"></script>
+       <script src="Node.js"></script>
+        <script>
+        
+            var tree = new Tree
+            let list =[]
+            tree.addValue(50)
+            for(let i =0 ; i<50 ; i++)
+            {
+                list.push(Math.floor((Math.random() * 100+1) ))
+                
+                tree.addValue(list[i])
+                console.log(list[i])
+            }
+            tree.root.search(tree.root ,list[25])
+          
+           // console.log(tree)
+        </script>
+    </body>
+</html>
