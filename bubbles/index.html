@@ -1,20 +1,27 @@
 <html>
   <head>
     <link href="style.css">
+    <style>
+      body{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+     .container{
+       width: 1170px;
+       /* margin: auto; */
+      
+     }
+     .container h1{
+       background-color: salmon;
+      padding: 90px;
+     }
+    </style>
   </head>
   <body>
       <div class="container">
-        <h1>Make Some emotion using p5 javascript library</h1>
-        <ul>
-          <li class="but"><a href="#" onclick="return test();">print squirs and circles randomly </a></li>
-          <li class="but"></li>
-          <li class="but"></li>
-          <li class="but"></li>
-          <li class="but"></li>
-          <li class="but"></li>
-        </ul>
-        
-
+        <h1>draw bubbles by drag mouse and keep moving it if you reach one of the canvas edge it will disapper</h1>
+      
       </div>
       <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
     <script src="skitch.js"></script>

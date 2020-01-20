@@ -9,14 +9,21 @@ var bubbles = []
 function setup() {
 createCanvas(700, 400)
 
-for(var i=0;i<50;i++)
-    bubbles[i]=new bubble(random(0,width),random(0,height))
+for(var i=0;i<10;i++)
+    bubbles.push(new bubble(random(width),random(height)))
    
   }
 // function mousePressed(){
 //     bubbles.push(new bubble(mouseX,mouseY))
 // }
-
+function mousePressed(){
+  // console.log( )
+   
+        for(let i = 0 ; i<bubbles.length ; i++)
+       { 
+        bubbles[i].clicked()
+       }
+}
 
 
 /*------------------*/
@@ -40,11 +47,7 @@ function draw() {
     background(0)
     for(let i = 0 ; i<bubbles.length ; i++)
        { 
-           if(mouseIsPressed){
-             // console.log( )
-               if(bubbles[i].checkDist(mouseX,mouseY))
-                   bubbles[i].changeColor()
-           }
+           
            bubbles[i].display()
            bubbles[i].move()
           
