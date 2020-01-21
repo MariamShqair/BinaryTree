@@ -16,14 +16,14 @@ for(var i=0;i<10;i++)
 // function mousePressed(){
 //     bubbles.push(new bubble(mouseX,mouseY))
 // }
-function mousePressed(){
-  // console.log( )
+// function mousePressed(){
+//   // console.log( )
    
-        for(let i = 0 ; i<bubbles.length ; i++)
-       { 
-        bubbles[i].clicked()
-       }
-}
+//         for(let i = 0 ; i<bubbles.length ; i++)
+//        { 
+//         bubbles[i].clicked()
+//        }
+// }
 
 
 /*------------------*/
@@ -47,7 +47,9 @@ function draw() {
     background(0)
     for(let i = 0 ; i<bubbles.length ; i++)
        { 
-           
+           if(mouseIsPressed){
+             bubbles[i].clicked()
+           }
            bubbles[i].display()
            bubbles[i].move()
           

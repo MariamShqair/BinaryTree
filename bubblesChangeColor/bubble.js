@@ -10,9 +10,10 @@ function bubble(x,y)
     this.display = function(){
     
     
-    stroke(random(1,255),random(1,255),0)
-    ellipse(this.x, this.y, 40, 40)
+    stroke(255)
     fill(this.color)
+    ellipse(this.x, this.y, 40, 40)
+    
     
     }
     
@@ -23,13 +24,13 @@ function bubble(x,y)
     
   this.clicked = function(){
  
-    radius = 20 / 2;
-    vectorX = mouseX - this.x;
-    vectorY = mouseY - this.y;
+    let d = dist(mouseX , mouseY ,this.x, this.y)
 
-    if (radius * radius > ( vectorX * vectorX + vectorY * vectorY))
-        this.color = color(25,0,50); 
-      
+    if ( d < 20 )
+       {
+            this.color = color(50,0,0)      
+      }
+    
    
   
 }
